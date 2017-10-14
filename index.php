@@ -42,6 +42,9 @@ $(function() {
         var param = {
             txtArray : $('#txtArray').val()
         };
+        if ($.trim($('#txtArray').val()) == '') {
+            return false;
+        }
         self.addClass('loading');
         $.post('convert.php', param, function(data) {
             var classStatus = (data.status) ? 'positive' : 'negative';
