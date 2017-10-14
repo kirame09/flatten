@@ -50,7 +50,7 @@ $(function() {
             var classStatus = (data.status) ? 'positive' : 'negative';
             setTimeout(function(){
                 self.removeClass('loading');
-                $('.message').removeClass('hidden').removeClass('positive negative')
+                $('.message').removeClass('hidden positive negative')
                     .addClass(classStatus).find('.header').html(data.header)
                         .next('p').html(data.info);
             }, 300);            
